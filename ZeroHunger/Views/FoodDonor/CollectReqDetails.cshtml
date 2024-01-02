@@ -1,0 +1,83 @@
+﻿@model ZeroHunger.EF.CollectRequest
+
+@{
+    ViewBag.Title = "CollectReqDetails";
+    Layout = "~/Views/Shared/_FoodDonorLayout.cshtml";
+}
+
+<h2>CollectReqDetails</h2>
+
+<div>
+    <h4>CollectRequest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CollectRequest_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollectRequest_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Food_Dscription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Food_Dscription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expired_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expired_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preffered_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preffered_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

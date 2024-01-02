@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ZeroHunger.EF.CollectRequest>
+
+@{
+    ViewBag.Title = "FoodDonorRequests";
+    Layout = "~/Views/Shared/_FoodDonorLayout.cshtml";
+}
+
+<h2>FoodDonorRequests</h2>
+
+<p>
+    @Html.ActionLink("Add New Item", "FoodDonorCollectRequest", "FoodDonor" , new { @class = "btn btn-success", style = "text-decoration: none; color: #fff;" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectRequest_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Food_Dscription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expired_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preffered_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectRequest_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Food_Dscription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expired_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preffered_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "CollectReqEdit", new { id = item.CollectRequest_Id }, new { @class = "btn btn-primary", style = "text-decoration: none; color: #fff;" }) |
+
+            @Html.ActionLink("Details", "CollectReqDetails", new { id = item.CollectRequest_Id }, new { @class = "btn btn-warning", style = "text-decoration: none; color: #fff;" }) |
+            @Html.ActionLink("Delete", "CollectReqDelete", new { id = item.CollectRequest_Id }, new { @class = "btn btn-danger", style = "text-decoration: none; color: #fff;" })
+        </td>
+    </tr>
+}
+
+</table>

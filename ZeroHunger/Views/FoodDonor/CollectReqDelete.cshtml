@@ -1,0 +1,89 @@
+﻿@model ZeroHunger.EF.CollectRequest
+
+@{
+    ViewBag.Title = "CollectReqDelete";
+    Layout = "~/Views/Shared/_FoodDonorLayout.cshtml";
+}
+
+<h2>CollectReqDelete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CollectRequest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CollectRequest_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollectRequest_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Food_Dscription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Food_Dscription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expired_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expired_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preffered_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preffered_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

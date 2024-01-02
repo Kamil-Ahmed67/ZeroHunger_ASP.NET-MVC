@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "AdminIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="header">
+    <h1 class="text-center">Admin Homepage</h1>
+    @if (TempData["Msg"] != null)
+    {
+        <p class="alert alert-info">@TempData["Msg"]</p>
+    }
+</div>
+
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Employee Recruitment</h5>
+                    <p class="card-text">Assigning employees for food distribution.</p>
+                    <a href="/Admin/AdminAddedEmployee" class="btn btn-primary">Registration</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Donated Food List</h5>
+                    <p class="card-text">Manage collect requests for your donated food.</p>
+                    <a href="/FoodDonor/FoodDonorRequests" class="btn btn-warning">Manage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Food Donations</h5>
+                    <p class="card-text">View and manage your food donations.</p>
+                    <a href="/FoodDonor/FoodDonorDonationHistory" class="btn btn-dark">View Donations</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Profile</h5>
+                    <p class="card-text">Update Admin Registration.</p>
+                    <a href="/Admin/AdminEditProfile" class="btn btn-danger">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

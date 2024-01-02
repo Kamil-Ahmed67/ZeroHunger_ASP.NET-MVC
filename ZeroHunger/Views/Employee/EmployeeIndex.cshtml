@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ZeroHunger.EF.CollectRequest>
+
+@{
+    ViewBag.Title = "EmployeeIndex";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<center><h2>Employee Dashboard</h2></center>
+<br />
+
+<p>
+    @Html.ActionLink("Food Distribution", "EmployeeFoodDistribution", "Employee", new { @class = "btn btn-dark", style = "text-decoration: none; color: #fff;" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectRequest_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Food_Dscription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expired_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preffered_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        foreach (var reqdetail in item.EmployeeCollectRequests)
+        {
+            if (reqdetail.EmpId == (int)Session["id"])
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CollectRequest_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Food_Dscription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Expired_Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preffered_Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DonorId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @if (item.Status.Trim() == "Pending")
+                        {
+                            <a class="btn btn-warning" href="@Url.Action("EmployeeCollected", "Employee", new { requestId = item.CollectRequest_Id})">Collected</a>
+
+                        }
+
+                    </td>
+                </tr>
+            }
+
+        }
+
+    }
+
+</table>

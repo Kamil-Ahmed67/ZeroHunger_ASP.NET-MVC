@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZeroHunger1ModelStoreContainer" CdmEntityContainer="ZeroHunger1Entities1">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="ZeroHunger1Model.Admin">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CollectRequests">
+      <EntityTypeMapping TypeName="ZeroHunger1Model.CollectRequest">
+        <MappingFragment StoreEntitySet="CollectRequests">
+          <ScalarProperty Name="CollectRequest_Id" ColumnName="CollectRequest_Id" />
+          <ScalarProperty Name="Food_Dscription" ColumnName="Food_Dscription" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Expired_Time" ColumnName="Expired_Time" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Preffered_Time" ColumnName="Preffered_Time" />
+          <ScalarProperty Name="DonorId" ColumnName="DonorId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeCollectRequests">
+      <EntityTypeMapping TypeName="ZeroHunger1Model.EmployeeCollectRequest">
+        <MappingFragment StoreEntitySet="EmployeeCollectRequests">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CollectRequet_Id" ColumnName="CollectRequet_Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeFoodDistributions">
+      <EntityTypeMapping TypeName="ZeroHunger1Model.EmployeeFoodDistribution">
+        <MappingFragment StoreEntitySet="EmployeeFoodDistributions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Distribution_Id" ColumnName="Distribution_Id" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emplyees">
+      <EntityTypeMapping TypeName="ZeroHunger1Model.Emplyee">
+        <MappingFragment StoreEntitySet="Emplyees">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FoodDistributions">
+      <EntityTypeMapping TypeName="ZeroHunger1Model.FoodDistribution">
+        <MappingFragment StoreEntitySet="FoodDistributions">
+          <ScalarProperty Name="Distribution_Id" ColumnName="Distribution_Id" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="CollectRequest_Id" ColumnName="CollectRequest_Id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FoodDonors">
+      <EntityTypeMapping TypeName="ZeroHunger1Model.FoodDonor">
+        <MappingFragment StoreEntitySet="FoodDonors">
+          <ScalarProperty Name="DonorId" ColumnName="DonorId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
