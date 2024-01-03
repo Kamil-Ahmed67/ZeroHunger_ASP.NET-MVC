@@ -1,2 +1,2 @@
 # ZeroHunger_ASP.NET-MVC
-The codes and remaining compnents are included in master-branch
+The codes,files and remaining compnents were included in master-branch
